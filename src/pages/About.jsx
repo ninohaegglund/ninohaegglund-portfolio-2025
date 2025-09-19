@@ -4,13 +4,14 @@ export default function About() {
       <div className="container narrow">
         <h1>About</h1>
         <p>
-          This starter gives you a basic website template: a header with navigation,
-          routed pages, a footer, and a touch of modern styling. Use it as a base
-          to build marketing sites, docs, or personal projects.
+         I'm currently studying .NET web development in Stockholm, with a strong focus on C#, ASP.NET Core, MVC, and frontend technologies. 
+         I enjoy building both full-stack applications and more structured backend systems. I also have hands-on experience with React, Tailwind, 
+         and Unity for 2D game development. Passionate about clean code, problem-solving, and continuously learning — especially through real-world projects. 
+         Looking for opportunities to grow as a developer in a collaborative team.
         </p>
         <p>
-          Customize the colors, typography, and layout in the CSS files to match
-          your brand. Add components and sections as needed.
+           Passionate about expanding my knowledge and skills in this field. Demonstrated ability to handle multiple tasks in fast-paced environments. 
+           Seeking to leverage these skills and experiences in a challenging role.
         </p>
       </div>
     </section>

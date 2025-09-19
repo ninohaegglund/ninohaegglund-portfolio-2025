@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-inner">
-        <p>© {year} MySite. All rights reserved.</p>
+        <p>© {year} Nino Hägglund — Portfolio All rights reserved.</p>
         <ul className="footer-links">
 
         </ul>

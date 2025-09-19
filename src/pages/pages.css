@@ -120,3 +120,45 @@
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; filter: none; transition: none; }
 }
+
+/* Skills card and progress bars */
+.skills-card { display: grid; gap: 1rem; }
+
+.progress-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .75rem;
+}
+
+.progress-item { display: grid; gap: .4rem; }
+
+.progress-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.progress-name { font-weight: 600; }
+.progress-value { color: var(--muted); font-size: .9rem; }
+
+.progress-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.progress {
+  width: 0; 
+  height: 100%;
+  background: var(--primary);
+  border-radius: inherit;
+  transition: width .9s cubic-bezier(.22,1,.36,1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress { transition: none; }
+}
