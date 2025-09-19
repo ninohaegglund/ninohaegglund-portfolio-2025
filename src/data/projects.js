@@ -4,7 +4,7 @@ export const projects = [
     title: 'React Quiz Game',
     description:
       'A quiz game built with React. Users answer timed questions with score tracking. Focused on hooks and component composition.',
-    image: '/src/assets/images/quiz.png',
+    image: '/assets/images/quiz.png',
     tags: ['React', 'Hooks', 'SPA'],
     liveUrl: 'https://thereact-quiz-app.netlify.app/',
    
@@ -14,7 +14,7 @@ export const projects = [
     title: 'WPF Product Catalogue (C#)',
     description:
       'A desktop app to manage products with add/edit/delete, search, and save/load to file.',
-    image: '/src/assets/images/wpf.png',
+    image: '/assets/images/wpf.png',
     tags: ['C#', 'WPF', 'Desktop'],
     sourceUrl: 'https://github.com/ninohaegglund/ProductCatalogue_WPF'
   },
@@ -23,7 +23,7 @@ export const projects = [
     title: 'Delivery Driver (Unity C#)',
     description:
       'A 2D Unity game. Pick up and deliver packages with basic game logic and collisions.',
-    image: '/src/assets/images/delivery.png',
+    image: '/assets/images/delivery.png',
     tags: ['Unity', 'C#', 'Game Dev'],
     sourceUrl: 'https://github.com/ninohaegglund/DeliveryDriver'
   },
@@ -32,7 +32,7 @@ export const projects = [
     title: 'Ventixe – Group Project',
     description:
       'Event planning web app built with ASP.NET Core. Includes CRUD, auth, and validation.',
-    image: '/src/assets/images/ventixe.png',
+    image: '/assets/images/ventixe.png',
     tags: ['ASP.NET Core', 'Team', 'CRUD'],
     sourceUrl: 'https://github.com/Grupp-4-Ventixe'
   },
@@ -41,7 +41,7 @@ export const projects = [
     title: 'Alpha Portal MVC (C#)',
     description:
       'Task and team management app. Full MVC with Razor views, validation, and SQL Server.',
-    image: '/src/assets/images/alpha.png',
+    image: '/assets/images/alpha.png',
     tags: ['ASP.NET MVC', 'SQL Server', 'CRUD'],
     sourceUrl: 'https://github.com/ninohaegglund/AlphaPortalMVC'
   },
@@ -50,7 +50,7 @@ export const projects = [
     title: 'Hederlige Harrys Bilar',
     description:
       'Task and team management app. Full MVC with Razor views, validation, and SQL Server.',
-    image: '/src/assets/images/grupp.png',
+    image: '/assets/images/grupp.png',
     tags: ['ASP.NET MVC', 'SQL Server', 'CRUD'],
     sourceUrl: 'https://github.com/ninohaegglund/AlphaPortalMVC'
   },
