@@ -4,7 +4,7 @@ export default function Navbar() {
       <div className="container nav">
         <a href="#top" className="brand">
           <span className="brand-logo" aria-hidden>🚀</span>
-          <span className="brand-text">Start</span>
+          <span className="brand-text">Web Portfolio</span>
         </a>
 
         <nav aria-label="Main navigation">

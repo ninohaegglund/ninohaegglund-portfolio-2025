@@ -49,9 +49,9 @@ export const projects = [
     id: 'alpha-portal',
     title: 'Hederlige Harrys Bilar',
     description:
-      'Task and team management app. Full MVC with Razor views, validation, and SQL Server.',
+      'Group project, car dealership website with responsive design, bootstrap, and team collaboration.',
     image: '/assets/images/grupp.png',
-    tags: ['ASP.NET MVC', 'SQL Server', 'CRUD'],
-    sourceUrl: 'https://github.com/ninohaegglund/AlphaPortalMVC'
+    tags: ['Web Design', 'Bootstrap', 'Team'],
+    sourceUrl: 'https://github.com/The-OG-Group-5/Hederlige-Harry.git'
   },
 ]
