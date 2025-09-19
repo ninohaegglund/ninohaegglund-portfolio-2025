@@ -1,0 +1,57 @@
+export const projects = [
+  {
+    id: 'react-quiz',
+    title: 'React Quiz Game',
+    description:
+      'A quiz game built with React. Users answer timed questions with score tracking. Focused on hooks and component composition.',
+    image: '/src/assets/images/quiz.png',
+    tags: ['React', 'Hooks', 'SPA'],
+    liveUrl: 'https://thereact-quiz-app.netlify.app/',
+   
+  },
+  {
+    id: 'wpf-catalog',
+    title: 'WPF Product Catalogue (C#)',
+    description:
+      'A desktop app to manage products with add/edit/delete, search, and save/load to file.',
+    image: '/src/assets/images/wpf.png',
+    tags: ['C#', 'WPF', 'Desktop'],
+    sourceUrl: 'https://github.com/ninohaegglund/ProductCatalogue_WPF'
+  },
+  {
+    id: 'delivery-driver',
+    title: 'Delivery Driver (Unity C#)',
+    description:
+      'A 2D Unity game. Pick up and deliver packages with basic game logic and collisions.',
+    image: '/src/assets/images/delivery.png',
+    tags: ['Unity', 'C#', 'Game Dev'],
+    sourceUrl: 'https://github.com/ninohaegglund/DeliveryDriver'
+  },
+  {
+    id: 'ventixe',
+    title: 'Ventixe – Group Project',
+    description:
+      'Event planning web app built with ASP.NET Core. Includes CRUD, auth, and validation.',
+    image: '/src/assets/images/ventixe.png',
+    tags: ['ASP.NET Core', 'Team', 'CRUD'],
+    sourceUrl: 'https://github.com/Grupp-4-Ventixe'
+  },
+  {
+    id: 'alpha-portal',
+    title: 'Alpha Portal MVC (C#)',
+    description:
+      'Task and team management app. Full MVC with Razor views, validation, and SQL Server.',
+    image: '/src/assets/images/alpha.png',
+    tags: ['ASP.NET MVC', 'SQL Server', 'CRUD'],
+    sourceUrl: 'https://github.com/ninohaegglund/AlphaPortalMVC'
+  },
+   {
+    id: 'alpha-portal',
+    title: 'Hederlige Harrys Bilar',
+    description:
+      'Task and team management app. Full MVC with Razor views, validation, and SQL Server.',
+    image: '/src/assets/images/grupp.png',
+    tags: ['ASP.NET MVC', 'SQL Server', 'CRUD'],
+    sourceUrl: 'https://github.com/ninohaegglund/AlphaPortalMVC'
+  },
+]

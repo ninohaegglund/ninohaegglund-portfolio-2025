@@ -1,0 +1,238 @@
+/* Layout */
+.app {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Header / Navbar */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(228, 228, 228, 0.432);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.brand-logo {
+  font-size: 1.2rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  padding: .5rem .75rem;
+  border-radius: 10px;
+  color: var(--muted);
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.nav-link.active {
+  color: var(--text);
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+/* Main content */
+.main {
+  padding-block: 2rem;
+}
+
+/* Hero */
+.hero {
+  padding: 3rem 0 2rem;
+  background: radial-gradient(1200px 600px at 10% -20%, #7ea5db91 0%, rgba(219,234,254,0) 60%),
+              radial-gradient(800px 400px at 100% 0%, #8fe4f000 0%, rgba(9, 191, 207, 0) 55%);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 .75rem;
+}
+
+.hero-subtitle {
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+  max-width: 60ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.feature-list {
+  margin: .25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.feature-list li {
+  margin: .25rem 0;
+}
+
+/* Sections */
+.section {
+  padding: 2.5rem 0;
+}
+
+.section-title {
+  margin: 0 0 1rem;
+}
+
+.features-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+/* Forms */
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: .4rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: .7rem .8rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid color-mix(in oklab, var(--primary) 40%, white);
+  border-color: var(--primary);
+}
+
+.form-success {
+  color: #16a34a;
+  margin: .25rem 0 0;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  background: #fff;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.footer a:hover {
+  color: var(--text);
+}
+
+/* Keep section titles visible below sticky header */
+.section-anchor { scroll-margin-top: 80px; }
+
+
+html { scroll-behavior: smooth; }
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Portrait (hero image) */
+.portrait-wrap { display: grid; place-items: center; }
+.portrait {
+  width: min(320px, 60vw);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 16px; 
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.portrait--round { border-radius: 999px; }
+.portrait--ring { outline: 6px solid rgba(37,99,235,.15); outline-offset: 6px; border-radius: 50%; }

@@ -1,0 +1,55 @@
+:root {
+  --top-bg: #ffffff;
+  --top-text: #0f172a;
+  --top-muted: #64748b;
+  --top-surface: #f8fafc;
+  --top-border: #e5e7eb;
+  --top-primary: #0953f1;
+  --top-primary-600: #1d4ed8;
+  --top-shadow: 0 10px 30px rgba(2, 6, 23, .08);
+  color-scheme: light;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: .7rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--top-border);
+  background: var(--top-bg);
+  color: var(--top-text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, opacity .2s ease;
+  box-shadow: var(--top-shadow);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top:hover {
+  transform: translateY(-1px);
+}
+
+.back-to-top:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.back-to-top-primary {
+  background: var(--top-primary);
+  border-color: var(--top-primary);
+  color: #fff;
+}
+.back-to-top-primary:hover {
+  background: var(--top-primary-600);
+  border-color: var(--top-primary-600);
+}
+
+/* Optional: reduced motion users shouldn't get hover motion */
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top,
+  .back-to-top:hover { transition: none; transform: none; }
+}
