@@ -46,12 +46,21 @@ export const projects = [
     sourceUrl: 'https://github.com/ninohaegglund/AlphaPortalMVC'
   },
    {
-    id: 'alpha-portal',
+    id: 'harry-bilar',
     title: 'Hederlige Harrys Bilar',
     description:
       'Group project, car dealership website with responsive design, bootstrap, and team collaboration.',
     image: '/assets/images/grupp.png',
     tags: ['Web Design', 'Bootstrap', 'Team'],
+    sourceUrl: 'https://github.com/The-OG-Group-5/Hederlige-Harry.git'
+  },
+   {
+    id: 'pc-builder',
+    title: 'PC Builder',
+    description:
+      'A web-based PC building tool built with C# and the MVC pattern, enabling users to design and customize computer setups.',
+    image: '/assets/images/pcbuilder.png',
+    tags: ['MVC', 'Bootstrap', 'Team'],
     sourceUrl: 'https://github.com/The-OG-Group-5/Hederlige-Harry.git'
   },
 ]
