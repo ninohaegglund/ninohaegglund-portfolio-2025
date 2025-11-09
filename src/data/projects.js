@@ -61,6 +61,15 @@ export const projects = [
       'A web-based PC building tool built with C# and the MVC pattern, enabling users to design and customize computer setups.',
     image: '/assets/images/pcbuilder.png',
     tags: ['MVC', 'Bootstrap', 'Team'],
-    sourceUrl: 'https://github.com/The-OG-Group-5/Hederlige-Harry.git'
+    sourceUrl: 'https://github.com/ninohaegglund/PCBuilder.git'
+  },
+    {
+    id: 'dr-news',
+    title: 'Dr News (Private project)',
+    description:
+      'A CMS website for news articles built with C# and MVC patterns, using a news API to fetch and display the latest headlines.',
+    image: '/assets/images/drnews.png',
+    tags: ['Umbraco', 'C#', 'Team'],
+    sourceUrl: 'https://github.com/ninohaegglund/drnews-cms'
   },
 ]

@@ -24,18 +24,31 @@
   .cards-grid { grid-template-columns: 1fr; }
 }
 
-/* Project card */
+
 .project-card {
   display: grid;
   grid-template-rows: auto 1fr;
   padding: 0;
   overflow: hidden;
+
+  /* Added for hover */
+  position: relative;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: .75rem;
+  background: var(--surface, #ffffff);
+  transition:
+    box-shadow .35s cubic-bezier(.22,.61,.36,1),
+    transform .35s cubic-bezier(.22,.61,.36,1),
+    border-color .35s ease,
+    background-color .35s ease;
+  will-change: transform;
 }
 .project-media img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   display: block;
+  transition: transform .6s cubic-bezier(.22,.61,.36,1);
 }
 .project-content {
   padding: 1rem;
@@ -66,17 +79,59 @@
   color: var(--text, #111827);
 }
 
-/* Actions */
+/* Actions (optional reveal effect) */
 .actions {
   display: flex;
   gap: .5rem;
   flex-wrap: wrap;
+  transition: opacity .3s ease, transform .3s ease;
+}
+.project-card .actions {
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
+}
+.project-card:hover .actions,
+.project-card:focus-within .actions {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Project card hover/focus states */
+.project-card:hover,
+.project-card:focus-within {
+  box-shadow:
+    0 4px 10px -2px rgba(0,0,0,.08),
+    0 8px 24px -4px rgba(0,0,0,.12);
+  transform: translateY(-4px);
+}
+.project-card:hover .project-media img,
+.project-card:focus-within .project-media img {
+  transform: scale(1.05);
+}
+.project-card:active {
+  transform: translateY(-2px);
+  box-shadow:
+    0 2px 6px -2px rgba(0,0,0,.12),
+    0 4px 16px -4px rgba(0,0,0,.15);
 }
 
 /* Reference card */
 .ref-card {
   display: grid;
   gap: .75rem;
+
+
+  padding: 1rem;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: .75rem;
+  background: var(--surface, #ffffff);
+  transition:
+    box-shadow .35s cubic-bezier(.22,.61,.36,1),
+    transform .35s cubic-bezier(.22,.61,.36,1),
+    border-color .35s ease,
+    background-color .35s ease;
 }
 .ref-header {
   display: flex;
@@ -93,6 +148,7 @@
   color: #fff;
   background: var(--primary, #2563eb);
   box-shadow: 0 4px 16px rgba(37, 99, 235, .25);
+  transition: transform .4s cubic-bezier(.22,.61,.36,1);
 }
 .ref-meta { line-height: 1.2; }
 .ref-name { margin: 0; font-size: 1rem; }
@@ -100,6 +156,49 @@
 .ref-quote {
   margin: 0;
   font-size: 1rem;
+  transition: color .3s ease;
+}
+
+/* Reference card hover/focus */
+.ref-card:hover,
+.ref-card:focus-within {
+  box-shadow:
+    0 4px 10px -2px rgba(0,0,0,.08),
+    0 8px 24px -4px rgba(0,0,0,.12);
+  transform: translateY(-3px);
+  border-color: var(--primary, #2563eb);
+  background: linear-gradient(
+      135deg,
+      rgba(37,99,235,.06),
+      rgba(255,255,255,1) 45%
+  );
+}
+.ref-card:hover .ref-avatar,
+.ref-card:focus-within .ref-avatar {
+  transform: scale(1.08) rotate(-3deg);
+}
+.ref-card:hover .ref-quote,
+.ref-card:focus-within .ref-quote {
+  color: var(--text, #111827);
+}
+
+
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card .project-media img,
+  .ref-card,
+  .ref-avatar,
+  .actions {
+    transition: none;
+  }
+  .project-card:hover,
+  .project-card:focus-within,
+  .ref-card:hover,
+  .ref-card:focus-within {
+    transform: none;
+  }
 }
 
 /* Fade-in on scroll */
