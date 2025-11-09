@@ -8,15 +8,19 @@ import BackToTop from '../components/BackToTop.jsx'
 import SkillsProgress from '../components/SkillsProgress.jsx'
 
 const skills = [
-  { name: 'C#', level: 70 },
-  { name: 'ASP.NET Core', level: 65 },
+  { name: 'C#', level: 75 },
+  { name: 'ASP.NET Core / MVC', level: 70 },
+  { name: 'Entity Framework Core', level: 65 },
   { name: 'SQL Server', level: 60 },
-  { name: 'Azure', level: 55 },
-  { name: 'JavaScript', level: 50 },
+  { name: 'Azure (App Service, SQL, Storage)', level: 60 },
+  { name: 'CI/CD (Azure DevOps)', level: 75 },
+  { name: 'JavaScript', level: 55 },
   { name: 'React', level: 50 },
-  { name: 'HTML/CSS', level: 85 },
-  { name: 'Git/GitHub', level: 70 },
-]
+  { name: 'HTML / CSS / Tailwind', level: 80 },
+  { name: 'Git / GitHub', level: 75 },
+  { name: 'Umbraco / Optimizely', level: 35 },
+  { name: 'Unity (2D)', level: 40 },
+];
 
 export default function Home() {
   return (

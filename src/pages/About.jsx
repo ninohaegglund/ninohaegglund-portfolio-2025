@@ -3,16 +3,10 @@ export default function About() {
     <section className="section">
       <div className="container narrow">
         <h1>About</h1>
-        <p>
-         I'm currently studying .NET web development in Stockholm, with a strong focus on C#, ASP.NET Core, MVC, and frontend technologies. 
-         I enjoy building both full-stack applications and more structured backend systems. I also have hands-on experience with React, Tailwind, 
-         and Unity for 2D game development. Passionate about clean code, problem-solving, and continuously learning — especially through real-world projects. 
-         Looking for opportunities to grow as a developer in a collaborative team.
-        </p>
-        <p>
-           Passionate about expanding my knowledge and skills in this field. Demonstrated ability to handle multiple tasks in fast-paced environments. 
-           Seeking to leverage these skills and experiences in a challenging role.
-        </p>
+       <p> I'm currently studying .NET web development in Stockholm, focusing on C#, ASP.NET Core, MVC, and modern frontend technologies. I enjoy building both full-stack applications and well-structured backend systems. My experience also includes working with React, Tailwind CSS, and Unity for 2D game development. 
+        In addition, I’ve worked with cloud deployment using Azure, implemented CI/CD pipelines, and gained hands-on experience with CMS platforms like Umbraco and Optimizely. </p> 
+       <p> I’m driven by clean code, problem-solving, and continuous learning — especially through real-world projects. 
+        I’m now looking for an internship opportunity where I can contribute to meaningful development work, grow as a developer, and collaborate with experienced professionals. </p>
       </div>
     </section>
   )
