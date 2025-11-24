@@ -6,6 +6,23 @@ import Contact from './Contact.jsx'
 import PokemonFetcher from '../components/PokemonFetcher.jsx'
 import BackToTop from '../components/BackToTop.jsx'
 import SkillsProgress from '../components/SkillsProgress.jsx'
+import { WeatherCard } from '../components/WeatherCard';
+
+// Temporary mock data (remove when you hook into API)
+const mockWeather = {
+  location: 'Stockholm, SE',
+  description: 'Light rain',
+  temp: 12.6,
+  feels_like: 11.9,
+  temp_min: 10.0,
+  temp_max: 14.0,
+  humidity: 87,
+  wind_speed: 5.1,
+  icon: '10d',
+  sunrise: 1699434000,
+  sunset: 1699470000,
+  updated: Math.floor(Date.now()/1000)
+};
 
 const skills = [
   { name: 'C#', level: 75 },
@@ -26,20 +43,31 @@ export default function Home() {
   return (
     <>
       <div id="top" />
-
+      
+         {/* Weather card added here for demo purposes     
+         
+           <div className="hero-widgets">
+              <WeatherCard data={mockWeather} variant="glass" />
+            </div> 
+         
+         */}
       <section id="home" className="section hero">
-        <div className="container">
-          <h1 className="hero-title">Nino Hägglund — Portfolio</h1>
-          <p className="hero-subtitle">.NET developer building useful and delightful software.</p>
-        </div>
+        <div className="container hero-layout">
+          <div className="hero-left">
+            <h1 className="hero-title">Nino Hägglund — Portfolio</h1>
+            <p className="hero-subtitle">.NET developer building useful and delightful software.</p>
 
-        <div className="portrait-wrap">
-          <img
-            className="portrait portrait--round portrait--ring"
-            src="/assets/images/Profile3.jpg"
-            alt="Portrait of Nino Hägglund"
-            loading="lazy"
-          />
+         
+          </div>
+
+          <div className="portrait-wrap">
+            <img
+              className="portrait portrait--round portrait--ring"
+              src="/assets/images/Profile3.jpg"
+              alt="Portrait of Nino Hägglund"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
@@ -49,7 +77,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* New Skills section */}
       <section id="skills" className="section section-anchor">
         <div className="container">
           <SkillsProgress skills={skills} />
@@ -74,6 +101,7 @@ export default function Home() {
         <div className="container">
           <Contact />
         </div>
+        
       </section>
 
       <BackToTop />
