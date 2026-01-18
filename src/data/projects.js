@@ -65,7 +65,7 @@ export const projects = [
   },
     {
     id: 'dr-news',
-    title: 'Dr News (In progress)',
+    title: 'Dr News',
     description:
       'A CMS website for news articles built with C# and MVC patterns, using a news API to fetch and display the latest headlines.',
     image: '/assets/images/drnews.png',

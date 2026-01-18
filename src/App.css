@@ -18,8 +18,9 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 64px;
+  gap: 1rem;
+  padding-block: .5rem;
+  height: auto;
 }
 
 .brand {
@@ -37,9 +38,38 @@
 .nav-list {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: .75rem;
   margin: 0;
   padding: 0;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-weather {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: .85rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.nav-weather-icon {
+  font-size: 1.1rem;
+}
+
+.nav-weather-temp {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.nav-weather-location {
+  opacity: .85;
 }
 
 .nav-link {

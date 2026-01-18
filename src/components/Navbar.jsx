@@ -1,3 +1,35 @@
+// Temporary mock data for header weather display
+const headerWeather = {
+  location: 'Stockholm, SE',
+  description: 'Light rain',
+  temp: 13,
+  icon: '10d'
+};
+
+function getWeatherGlyph(code) {
+  const map = {
+    '01d': '☀️',
+    '01n': '🌕',
+    '02d': '🌤️',
+    '02n': '☁️',
+    '03d': '☁️',
+    '03n': '☁️',
+    '04d': '☁️',
+    '04n': '☁️',
+    '09d': '🌧️',
+    '09n': '🌧️',
+    '10d': '🌦️',
+    '10n': '🌧️',
+    '11d': '⛈️',
+    '11n': '⛈️',
+    '13d': '❄️',
+    '13n': '❄️',
+    '50d': '🌫️',
+    '50n': '🌫️'
+  };
+  return map[code] || '🌈';
+}
+
 export default function Navbar() {
   return (
     <header className="header">
@@ -7,7 +39,7 @@ export default function Navbar() {
           <span className="brand-text">Web Portfolio</span>
         </a>
 
-        <nav aria-label="Main navigation">
+        <nav className="nav-center" aria-label="Main navigation">
           <ul className="nav-list">
             <li><a className="nav-link" href="#about">About</a></li>
             <li><a className="nav-link" href="#projects">Projects</a></li>
@@ -15,7 +47,15 @@ export default function Navbar() {
             <li><a className="nav-link" href="#contact">Contact</a></li>
           </ul>
         </nav>
+
+        <div className="nav-weather" aria-label="Current weather">
+          <span className="nav-weather-icon" aria-hidden>
+            {getWeatherGlyph(headerWeather.icon)}
+          </span>
+          <span className="nav-weather-temp">{headerWeather.temp}°C</span>
+          <span className="nav-weather-location">{headerWeather.location}</span>
+        </div>
       </div>
     </header>
-  )
+  );
 }

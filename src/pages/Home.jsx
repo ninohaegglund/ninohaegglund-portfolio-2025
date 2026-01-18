@@ -3,26 +3,8 @@ import About from './About.jsx'
 import Projects from './Projects.jsx'
 import References from './References.jsx'
 import Contact from './Contact.jsx'
-import PokemonFetcher from '../components/PokemonFetcher.jsx'
 import BackToTop from '../components/BackToTop.jsx'
 import SkillsProgress from '../components/SkillsProgress.jsx'
-import { WeatherCard } from '../components/WeatherCard';
-
-// Temporary mock data (remove when you hook into API)
-const mockWeather = {
-  location: 'Stockholm, SE',
-  description: 'Light rain',
-  temp: 12.6,
-  feels_like: 11.9,
-  temp_min: 10.0,
-  temp_max: 14.0,
-  humidity: 87,
-  wind_speed: 5.1,
-  icon: '10d',
-  sunrise: 1699434000,
-  sunset: 1699470000,
-  updated: Math.floor(Date.now()/1000)
-};
 
 const skills = [
   { name: 'C#', level: 75 },
@@ -43,14 +25,7 @@ export default function Home() {
   return (
     <>
       <div id="top" />
-      
-         {/* Weather card added here for demo purposes     
-         
-           <div className="hero-widgets">
-              <WeatherCard data={mockWeather} variant="glass" />
-            </div> 
-         
-         */}
+
       <section id="home" className="section hero">
         <div className="container hero-layout">
           <div className="hero-left">
@@ -87,7 +62,6 @@ export default function Home() {
         <div className="container">
           <Projects />
           <div className="block-sep" />
-          <PokemonFetcher />
         </div>
       </section>
 
