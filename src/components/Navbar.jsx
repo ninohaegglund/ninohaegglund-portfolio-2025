@@ -35,8 +35,11 @@ export default function Navbar() {
     <header className="header">
       <div className="container nav">
         <a href="#top" className="brand">
-          <span className="brand-logo" aria-hidden>🚀</span>
-          <span className="brand-text">Web Portfolio</span>
+          <span className="brand-mark" aria-hidden>NH</span>
+          <span className="brand-text-wrap">
+            <span className="brand-title">Nino Hägglund</span>
+            <span className="brand-subtitle">.NET Developer</span>
+          </span>
         </a>
 
         <nav className="nav-center" aria-label="Main navigation">
@@ -47,6 +50,39 @@ export default function Navbar() {
             <li><a className="nav-link" href="#contact">Contact</a></li>
           </ul>
         </nav>
+
+        <div className="nav-social">
+          <a
+            href="https://github.com/ninohaegglund"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-icon-link"
+            aria-label="GitHub profile"
+          >
+            <img
+              src="/assets/images/github.svg"
+              className="nav-icon"
+              alt=""
+              aria-hidden="true"
+            />
+            <span className="sr-only">GitHub</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nino-h%C3%A4gglund-441740307"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-icon-link"
+            aria-label="LinkedIn profile"
+          >
+            <img
+              src="/assets/images/linkedin.svg"
+              className="nav-icon"
+              alt=""
+              aria-hidden="true"
+            />
+            <span className="sr-only">LinkedIn</span>
+          </a>
+        </div>
 
         <div className="nav-weather" aria-label="Current weather">
           <span className="nav-weather-icon" aria-hidden>

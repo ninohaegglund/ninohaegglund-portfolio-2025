@@ -27,12 +27,35 @@
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  font-weight: 800;
-  letter-spacing: .2px;
 }
 
-.brand-logo {
-  font-size: 1.2rem;
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-600));
+  color: #fff;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .04em;
+}
+
+.brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-title {
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  font-size: .75rem;
+  color: var(--muted);
 }
 
 .nav-list {
@@ -48,6 +71,34 @@
   flex: 1;
   display: flex;
   justify-content: center;
+}
+
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.nav-icon-link {
+  color: var(--muted);
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.nav-icon-link:hover {
+  color: var(--text);
+  border-color: var(--border);
+  background: var(--surface);
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
 }
 
 .nav-weather {
@@ -110,6 +161,14 @@
 }
 
 .hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Home hero layout (text left, image right) */
+.hero-layout {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 2rem;
@@ -258,7 +317,8 @@ textarea:focus {
 html { scroll-behavior: smooth; }
 
 @media (max-width: 900px) {
-  .hero-inner {
+  .hero-inner,
+  .hero-layout {
     grid-template-columns: 1fr;
   }
   .features-grid {
