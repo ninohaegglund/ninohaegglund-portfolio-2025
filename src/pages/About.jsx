@@ -3,7 +3,7 @@ import './pages.css'
 export default function About() {
   return (
     <section className="section">
-      <div className="container">
+      <div className="container narrow">
         <header className="page-header">
           <h1 className="page-title">About</h1>
           <p className="page-subtitle">A bit about who I am and how I work.</p>

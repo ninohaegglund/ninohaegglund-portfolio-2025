@@ -144,12 +144,11 @@
 }
 
 /* Main content */
-.main {
-  padding-block: 2rem;
-}
+
 
 /* Hero */
 .hero {
+  height: 50vh;
   padding: 3rem 0 2rem;
   background: radial-gradient(1200px 600px at 10% -20%, #afcffffb 0%, rgb(236, 235, 235) 60%),
               radial-gradient(800px 400px at 100% 0%, #8fe5f0d3 0%, rgba(10, 219, 238, 0.945) 55%);
@@ -176,7 +175,8 @@
 }
 
 .hero-title {
-  font-size: clamp(4rem, 4vw, 3rem);
+  max-width: 600px;
+  font-size: clamp(4rem, 4vw, 4rem);
   line-height: 1.1;
   margin: 0 0 .75rem;
   animation: hero-fade-up .6s cubic-bezier(.22,1,.36,1) .05s both;
@@ -334,13 +334,25 @@ html { scroll-behavior: smooth; }
   to   { opacity: 1; transform: none; filter: none; }
 }
 .portrait {
-  width: min(320px, 60vw);
+  width: min(360px, 60vw);
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 16px; 
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   animation: portrait-in .6s ease-out .18s both;
+  transition: translate 1s ease, transform 1s ease;
 }
 .portrait--round { border-radius: 999px; }
-.portrait--ring { outline: 6px solid rgba(129, 187, 235, 0.26); outline-offset: 6px; border-radius: 50%; }
+
+/* Hover scale effect for hero image */
+@media (hover: hover) {
+  .portrait:hover { transform: scale(1.06); }
+  .portrait-wrap:hover .portrait { transform: scale(1.06); }
+}
+.portrait-wrap:focus-within .portrait { transform: scale(1.06); }
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait { transition: none; }
+}
+
