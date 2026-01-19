@@ -174,8 +174,12 @@
   align-items: center;
 }
 
+/* Keep hero section at previous container width */
+.hero .container {
+  max-width: 1100px;
+}
+
 .hero-title {
-  max-width: 600px;
   font-size: clamp(4rem, 4vw, 4rem);
   line-height: 1.1;
   margin: 0 0 .75rem;
@@ -346,10 +350,8 @@ html { scroll-behavior: smooth; }
 .portrait--round { border-radius: 999px; }
 
 /* Hover scale effect for hero image */
-@media (hover: hover) {
-  .portrait:hover { transform: scale(1.06); }
-  .portrait-wrap:hover .portrait { transform: scale(1.06); }
-}
+.portrait:hover { transform: scale(1.06); }
+.portrait-wrap:hover .portrait { transform: scale(1.06); }
 .portrait-wrap:focus-within .portrait { transform: scale(1.06); }
 
 @media (prefers-reduced-motion: reduce) {
