@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <div id="top" />
 
-      <section id="home" className="section hero">
+      <section id="home" className="section hero hero--midnight">
         <div className="container hero-layout">
           <div className="hero-left">
             <h1 className="hero-title">Nino Hägglund — .NET developer</h1>
