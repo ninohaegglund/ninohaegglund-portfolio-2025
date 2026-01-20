@@ -38,7 +38,7 @@ export default function Home() {
           <div className="portrait-wrap">
             <img
               className="portrait portrait--round portrait--ring"
-              src="/assets/images/Profile3.jpg"
+              src="/assets/images/Profile1.png"
               alt="Portrait of Nino Hägglund"
               loading="lazy"
             />
