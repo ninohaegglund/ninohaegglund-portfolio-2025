@@ -148,7 +148,7 @@
 
 /* Hero */
 .hero {
-  height: 50vh;
+  min-height: 50vh;
   padding: 3rem 0 2rem;
   /* Aurora (cool + creative, light-on-white) */
   background:
@@ -352,14 +352,38 @@ html { scroll-behavior: smooth; }
   .hero-inner,
   .hero-layout {
     grid-template-columns: 1fr;
+    text-align: center;
   }
+
+  .hero {
+    min-height: auto;
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero-left {
+    display: grid;
+    justify-items: center;
+  }
+
+  .hero .container {
+    justify-items: center;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
   }
 }
 
 /* Portrait (hero image) */
-.portrait-wrap { display: grid; place-items: center; overflow: hidden; width: 340px; border-radius: 999px;   border: 2px solid var(--border);   border-color: rgba(119, 125, 136, 0.548); } }
+.portrait-wrap {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  width: 340px;
+  max-width: 100%;
+  border-radius: 999px;
+  border: 2px solid rgba(119, 125, 136, 0.548);
+}
 
 /* Apply fade/translate animation to wrapper to avoid overriding image hover */
 .portrait-wrap {
@@ -388,5 +412,16 @@ html { scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion: reduce) {
   .portrait { transition: none; }
+}
+
+@media (max-width: 600px) {
+  .portrait-wrap {
+    width: min(260px, 70vw);
+    margin-top: 1.5rem;
+  }
+
+  .portrait {
+    width: 100%;
+  }
 }
 
