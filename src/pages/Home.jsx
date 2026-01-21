@@ -5,6 +5,7 @@ import References from './References.jsx'
 import Contact from './Contact.jsx'
 import BackToTop from '../components/BackToTop.jsx'
 import SkillsProgress from '../components/SkillsProgress.jsx'
+import TypingTitle from '../components/TypingTitle.jsx'
 
 const skills = [
   { name: 'C#', level: 75 },
@@ -29,10 +30,8 @@ export default function Home() {
       <section id="home" className="section hero hero--midnight">
         <div className="container hero-layout">
           <div className="hero-left">
-            <h1 className="hero-title">Nino Hägglund — .NET developer</h1>
-            <p className="hero-subtitle">.NET developer building useful and delightful software.</p>
-
-         
+            <TypingTitle text={"Nino Hägglund — .NET developer"} />
+            <p className="hero-subtitle">.NET developer building useful software.</p>
           </div>
 
           <div className="portrait-wrap">
