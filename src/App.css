@@ -35,12 +35,8 @@
   justify-content: center;
   width: 32px;
   height: 32px;
+  background: #e6f5f7;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-600));
-  color: #fff;
-  font-weight: 700;
-  font-size: .9rem;
-  letter-spacing: .04em;
 }
 
 .brand-text-wrap {
@@ -381,8 +377,8 @@ html { scroll-behavior: smooth; }
   overflow: hidden;
   width: 340px;
   max-width: 100%;
-  border-radius: 999px;
-  border: 2px solid rgba(119, 125, 136, 0.548);
+  border-radius: 16px; 
+  border: 1px solid rgba(119, 125, 136, 0.308);
 }
 
 /* Apply fade/translate animation to wrapper to avoid overriding image hover */
@@ -400,15 +396,17 @@ html { scroll-behavior: smooth; }
   object-fit: cover;
   border-radius: 16px; 
   box-shadow: var(--shadow);
-
-  transition: translate 1s ease, transform 1s ease;
+  transition: transform 1s cubic-bezier(.22,.61,.36,1), filter 1s cubic-bezier(.22,.61,.36,1);
+  will-change: transform, filter;
 }
-.portrait--round { border-radius: 999px; }
 
 /* Hover scale effect for hero image */
-.portrait:hover { transform: scale(1.06); }
-.portrait-wrap:hover .portrait { transform: scale(1.06); }
-.portrait-wrap:focus-within .portrait { transform: scale(1.06); }
+.portrait:hover,
+.portrait-wrap:hover .portrait,
+.portrait-wrap:focus-within .portrait {
+  transform: scale(1.06);
+  filter: brightness(1.16) saturate(1.04);
+}
 
 @media (prefers-reduced-motion: reduce) {
   .portrait { transition: none; }

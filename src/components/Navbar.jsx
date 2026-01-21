@@ -35,7 +35,7 @@ export default function Navbar() {
     <header className="header">
       <div className="container nav">
         <a href="#top" className="brand">
-          <span className="brand-mark" aria-hidden>NH</span>
+          <img src="/assets/images/brand-mark.svg" alt="NH" className="brand-mark" />
           <span className="brand-text-wrap">
             <span className="brand-title">Nino Hägglund</span>
             <span className="brand-subtitle">.NET Developer</span>
