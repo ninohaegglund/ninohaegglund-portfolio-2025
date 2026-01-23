@@ -1,6 +1,7 @@
 import ProjectCard from '../components/ProjectCard.jsx'
 import { projects } from '../data/projects.js'
 import './pages.css'
+import AnimatedBackground from '../components/AnimatedBackground.jsx'
 
 export default function Projects() {
   return (
@@ -11,10 +12,13 @@ export default function Projects() {
           <p className="page-subtitle">A selection of things I’ve built or worked on.</p>
         </header>
 
-        <div className="cards-grid">
-          {projects.map((p, i) => (
-            <ProjectCard key={p.id} project={p} index={i} />
-          ))}
+        <div className="projects-wrap">
+          <AnimatedBackground />
+          <div className="cards-grid">
+            {projects.map((p, i) => (
+              <ProjectCard key={p.id} project={p} index={i} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
