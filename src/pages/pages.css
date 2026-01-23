@@ -31,6 +31,12 @@
 .projects-wrap {
   position: relative;
 }
+.animated-canvas-bg {
+  position: absolute;
+  inset: -40px 0 -40px 0; /* slight bleed for nicer edges */
+  z-index: 0;
+  pointer-events: none;
+}
 .animated-bg {
   position: absolute;
   inset: -80px 0 -80px 0;
@@ -46,31 +52,49 @@
   opacity: .55;
   mix-blend-mode: multiply;
   transform-origin: center;
-  animation: blob-float 18s ease-in-out infinite;
+  will-change: transform;
 }
 .animated-bg .b1 {
   left: -80px;
   top: -40px;
   background: radial-gradient(closest-side, color-mix(in oklab, var(--primary) 86%, white), transparent 75%);
+  animation: blob-float-a 32s ease-in-out infinite alternate;
 }
 .animated-bg .b2 {
   right: 8%;
   top: 10%;
-  animation-delay: 3s;
   background: radial-gradient(closest-side, color-mix(in oklab, #f59e0b 68%, white), transparent 75%);
+  animation: blob-float-b 36s ease-in-out infinite alternate 3s;
 }
 .animated-bg .b3 {
   left: 22%;
   bottom: -20px;
-  animation-delay: 6s;
   background: radial-gradient(closest-side, color-mix(in oklab, #06b6d4 70%, white), transparent 75%);
+  animation: blob-float-c 40s ease-in-out infinite alternate 6s;
 }
 
-@keyframes blob-float {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  25%      { transform: translate3d(24px, -18px, 0) scale(1.06); }
-  50%      { transform: translate3d(-18px, 22px, 0) scale(0.98); }
-  75%      { transform: translate3d(12px, -8px, 0) scale(1.03); }
+@keyframes blob-float-a {
+  0%   { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  25%  { transform: translate3d(48px, -36px, 0) scale(1.05) rotate(-2deg); }
+  50%  { transform: translate3d(-36px, 44px, 0) scale(0.97) rotate(3deg); }
+  75%  { transform: translate3d(24px, -20px, 0) scale(1.03) rotate(-1deg); }
+  100% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+}
+
+@keyframes blob-float-b {
+  0%   { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  20%  { transform: translate3d(-40px, 28px, 0) scale(1.04) rotate(2deg); }
+  50%  { transform: translate3d(56px, -42px, 0) scale(0.98) rotate(-3deg); }
+  80%  { transform: translate3d(-28px, 36px, 0) scale(1.02) rotate(1deg); }
+  100% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+}
+
+@keyframes blob-float-c {
+  0%   { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  30%  { transform: translate3d(40px, 40px, 0) scale(1.06) rotate(-2deg); }
+  55%  { transform: translate3d(-52px, -28px, 0) scale(0.96) rotate(2deg); }
+  85%  { transform: translate3d(24px, 32px, 0) scale(1.03) rotate(-1deg); }
+  100% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
 }
 
 /* Respect reduced motion */

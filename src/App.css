@@ -5,6 +5,17 @@
   grid-template-rows: auto 1fr auto;
 }
 
+/* Content layer above fixed site background */
+.app-content { position: relative; z-index: 1; }
+
+/* Full-page canvas background */
+.site-canvas-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* Header / Navbar */
 .header {
   position: sticky;
